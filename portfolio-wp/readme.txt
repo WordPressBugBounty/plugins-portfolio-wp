@@ -1,39 +1,39 @@
-===  Portfolio, Gallery, Product Catalog - Grid KIT Portfolio ===
+===  Portfolio Gallery, Product Catalog - Grid KIT Portfolio ===
 Contributors: wpsofts
 Tags: portfolio, gallery, photo gallery, portfolio gallery, portfolio plugin
 Requires at least: 4.0
-Tested up to: 6.6.1
-Stable tag: 2.2.1
+Tested up to: 6.8.2
+Stable tag: 2.2.2
 License: GPLv2 or later
 
-Portfolio, gallery, product catalog, teams, logos and more. All-in-one plugin - Grid Kit Portfolio Gallery
+Portfolio, gallery, catalog, instagram feed etc. all in one plugin - Grid Kit Portfolio Gallery
 
 == Description ==
 
 = GRID KIT PORTFOLIO GALLERY BY WPSOFTS =
 
-Ultimate solution for building WordPress layouts, e.g. portfolio showcases, video or photo gallery, product catalog, image slider, instagram feed, clients or team members gallery.
+Ultimate solution for building WordPress layouts, e.g. portfolio showcase, video or photo gallery, product catalog, image slider, instagram feed, clients or team members gallery.
 
 https://youtu.be/QsvR-h0YzE8
 
-Grid Kit Portfolio was designed to to build simple portfolio & gallery layouts, but powerful enough to be used for:
+GridKit Portfolio Gallery designed to to build simple portfolio galleries, but powerful enough to be used for:
 
-* Showcasing work portfolio projects
+* Showcasing portfolio projects
 * Building multipurpose gallery layouts
 * Grouping galleries into albums
-* Listing product catalog entries
+* Listing product catalog items
 * Building slider presentations
-* Showcasing sponsors or client logos
+* Showcasing sponsors or clients logos
 * Making team members presentation
 
 
 == FREE BENEFITS ==
 
 = RESPONSIVE & MOBILE FRIENDLY =
-Don't worry about responsiveness anymore! Grid Kit Portfolio will make your gallery presentations compatible in any environment, be it a mobile, tablet or desktop.
+Don't worry about responsiveness anymore! Grid Kit Portfolio Gallery will make your content compatible in any environment, be it a mobile, tablet or desktop.
 
 = LAYOUT BUILDERS =
-Embedded layout builder included as a Free feature! Build layout structures such as a portfolio, photo gallery, product catalog, photo gallery slider, clients or sponsors presentation, team members grid.
+Embedded layout builder included as a Free feature! Build layout structures from your portfolio, photo gallery, product catalog, gallery sliders, clients logos and team members.
 
 = POPUP ADD-ON =
 Embedded popup extension will make your portfolio showcases more attractive and informative, e.g. if you want to showcase grouped items in popup views or want to convey detailed insights about your portfolio projects.
@@ -99,9 +99,9 @@ Note: Most our demos are predefined templates included in PREMIUM version. You c
 
 == Detailed Description ==
 
-GridKit Portfolio is a powerful all-in-one WordPress multipurpose gallery plugin for building almost any kind of layouts. All gallery layouts are 100% mobile friendly. Choose one of supported layout schemes which the best meets your needs ( e.g. grids, masonry, puzzle or slider ) to showcase your portfolio in literally few minutes. It supports popup add-ons for portfolio content, gallery images, iFrame contents, videos or maps. Grid Kit Portfolio Gallery includes 1000+ predefined animations, effects and themes. Premium version also supports predefined templates gallery / library which helps you pick one of supported templates to get started your gallery with few clicks. The portfolio project related captions, descriptions, links, hover buttons are supported. Element categorization, video or photo gallery pagination and content lazy loading features improves your website's performance. Portfolio or gallery items can be shared with a single click, the social sharing feature is an embedded add-on which you can be turned on from your layout settings. So you'll let your visitors share your portfolio and gallery elements right from the gallery layout presentation. This is not the all, you can turn your website into an eCommerce platform and showcase products, catalogs on your website. Let customers place online product enquiries, leave product reviews on your catalogs. Customizations are limited in Free version, but with Premium version you'll be able to customize almost everything in the settings section. And the most important one, no coding knowledge required!
+GridKit Portfolio Gallery is a powerful all-in-one WordPress multipurpose plugin for building almost any kind of layouts. All gallery layouts are 100% mobile friendly. Choose one of supported layout schemes which the best meets your needs ( e.g. grids, masonry, puzzle or slider ) to showcase your portfolio in literally few minutes. It supports popup add-ons for portfolio content, gallery images, iFrame contents, videos or maps. Grid Kit Portfolio Gallery includes 1000+ predefined animations, effects and themes. Premium version also supports predefined templates library which helps you pick one of supported templates to get started with few clicks. Portfolio project captions, descriptions, links, hover buttons are supported. Project categorization, video or photo gallery pagination and content lazy loading improves your website's performance. Social sharing is an embedded add-on which you can turn on from your settings and let your visitors share your portfolio projects right from the gallery presentation. This is not the all, you can turn your website to eCommerce and showcase product catalogs on your website. Let customers place online product enquiries or leave product reviews. Customizations are limited in Free version, but with Premium version you'll be able to customize almost everything from settings section. And the most important one, no coding knowledge required!
 
-And this are just top notch features implemented in the Grid Kit portfolio & gallery builder, there are dozen of supported features you’ll definitely enjoy!
+And this are just top notch features implemented in Grid Kit Portfolio Gallery, there are dozen of supported features you’ll definitely enjoy!
 
 
 = WPSofts API =
@@ -124,7 +124,7 @@ More detailed information regarding Premium installation you can find [here](htt
 
 = Can I put 2 portfolio layouts on the same page? =
 
-Multiple portfolio layouts on the page is supported in the Premium version! More detailed information you can checkout [here](https://wpsofts/com).
+Multiple portfolio layouts on the page is supported in Premium version! More detailed information you can checkout [here](https://wpsofts/com).
 
 =  Cannot redeclare activation_hook() error message on installation! =
 
@@ -183,6 +183,10 @@ You can manually upload and activate Grid Kit:
 10. More info on https://wpsofts.com
 
 == Changelog ==
+
+= 2.2.2 =
+* lightGallery related issues were fixed
+* WP 6.8.2 compatibility checked
 
 = 2.2.1 =
 * Admin loader z-index related issue resolved

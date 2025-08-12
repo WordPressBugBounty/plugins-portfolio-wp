@@ -7,7 +7,7 @@
 * Author: wpsofts
 * Author URI: http://wpsofts.com
 * License: GPLv2 or later
-* Version: 2.2.1
+* Version: 2.2.2
 */
 
 

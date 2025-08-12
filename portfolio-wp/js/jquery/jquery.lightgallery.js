@@ -210,7 +210,7 @@
                     $('body').on('touchmove.lightGallery', function (e) {
                         var orig = e.originalEvent;
                         endCoords = orig.targetTouches[0];
-                        
+
                         //patch
                         if(!jQuery(e.target).parent().hasClass("lg-info")) e.preventDefault();
                     });
@@ -293,6 +293,50 @@
                 }
                 return '<div class="video-cont" style="max-width:' + settings.videoMaxWidth + ' !important;"><div class="video">' + video + '</div></div>';
             },
+            sanitizeHtml: function (dirtyHtml) {
+              const dangerousTags = ['script', 'iframe', 'object', 'embed', 'style', 'link', 'meta'];
+              const dangerousAttrs = ['on', 'xlink:href', 'srcdoc'];
+
+              const temp = document.createElement('div');
+              temp.innerHTML = dirtyHtml;
+
+              const walk = (node) => {
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                  const tag = node.tagName.toLowerCase();
+
+                  // Remove dangerous tags
+                  if (dangerousTags.includes(tag)) {
+                    node.remove();
+                    return;
+                  }
+
+                  // Remove dangerous attributes
+                  for (const attr of Array.from(node.attributes)) {
+                    const name = attr.name.toLowerCase();
+                    const value = attr.value;
+
+                    // Remove any event handlers or javascript: links
+                    if (
+                      name.startsWith('on') ||
+                      dangerousAttrs.includes(name) ||
+                      value.toLowerCase().includes('javascript:') ||
+                      value.toLowerCase().includes('data:')
+                    ) {
+                      node.removeAttribute(attr.name);
+                    }
+                  }
+                }
+
+                // Recursively walk through child nodes
+                for (const child of Array.from(node.childNodes)) {
+                  walk(child);
+                }
+              };
+
+              walk(temp);
+
+              return temp.innerHTML;
+            },
             addHtml: function (index) {
                 var dataSubHtml = null;
                 if (settings.dynamic) {
@@ -307,6 +351,9 @@
                     } else {
                         dataSubHtml = dataSubHtml;
                     }
+
+                    var $this = this;
+                    dataSubHtml = $this.sanitizeHtml(dataSubHtml);
                     $slide.eq(index).append(dataSubHtml);
                 }
             },
@@ -318,6 +365,9 @@
                     dataSubHtml = $(plugin).attr('data-sub-html');
                 }
                 if (typeof dataSubHtml !== 'undefined' && dataSubHtml !== null) {
+
+                    var $this = this;
+                    dataSubHtml = $this.sanitizeHtml(dataSubHtml);
                     $gallery.append(dataSubHtml);
                 }
             },
@@ -452,8 +502,8 @@
                     }
                     $gallery.append('<div class="thumb-cont"><div class="thumb-info">' + $close + '</div><div class="thumb-inner"></div></div>');
                     $thumb_cont = $gallery.find('.thumb-cont');
-                    $prev.after('<a class="cl-external"><i class="fa fa-chain cl-icon"></a>'); //mx: 
-                    $prev.after('<a class="cl-info"><i class="fa fa-info cl-icon"></i></a>'); //mx: 
+                    $prev.after('<a class="cl-external"><i class="fa fa-chain cl-icon"></a>'); //mx:
+                    $prev.after('<a class="cl-info"><i class="fa fa-info cl-icon"></i></a>'); //mx:
                     $prev.after('<a class="cl-thumb"><i class="fa fa-list cl-icon"></a>');
                     $prev.parent().addClass('has-thumb');
                     $gallery.find('.cl-thumb').bind('click touchend', function () {
